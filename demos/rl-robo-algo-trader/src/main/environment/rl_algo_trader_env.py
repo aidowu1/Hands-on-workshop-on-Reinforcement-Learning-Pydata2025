@@ -91,35 +91,6 @@ class TradingEnv(gym.Env):
             done = False
         terminated = False
 
-        # self.correct = action == self.data_['d'].iloc[self.bar]
-        # ret = self.data['r'].iloc[self.bar] * self.leverage
-        # reward_1 = 1 if self.correct else 0
-        # reward_2 = abs(ret) if self.correct else -abs(ret)
-        # self.factor = 1 if self.correct else -1
-        # if self.factor == 1:                  # Buy signal
-        #     self.states_buy.append(self.bar)
-        # else:
-        #     self.states_sell.append(self.bar) # Sell signal
-        # self.treward += reward_1
-        # self.bar += 1
-        # self.accuracy = self.treward / (self.bar - self.lags)
-        # self.performance *= math.exp(reward_2)
-        # if self.bar >= len(self.data):
-        #     done = True
-        # elif reward_1 == 1:
-        #     done = False
-        # elif (self.performance < self.min_performance and
-        #       self.bar > self.lags + 5):
-        #     done = True
-        # else:
-        #     done = False
-        #
-        # state = self.getState()
-        # reward = reward_1 + reward_2 * 5
-        # self.total_reward += reward
-        # terminated = False
-        # info = self._getInfos()
-        # self.episode_infos.append(info)
         return state.values, reward, done, terminated, info
 
 
