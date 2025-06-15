@@ -35,13 +35,13 @@ Install the code from the git repo:
 
 Demo source code:
  - Source code for the Grid World demo is located here:
-   - ./demos/grid-world
+   - [grid-world](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/grid-world)
  - Source code for the Frozen Lake demo is located here: 
-   - ./demos/frozen-lake
+   - [frozen-lake](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/frozen-lake)
  - Source code for the Cart Pole demo is located here:
    - [cart-pole](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/cart-pole)
  - Source code for the Pendulum demo is located here:
-   - ./demos/pendulum
+   - [pendulum](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/pendulum)
  - Source code for the Algorithmic RL trader demo is located here:
-   - ./demos/rl-robo-algo-trader
+   - [rl-robo-algo-trader](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/rl-robo-algo-trader)
 
