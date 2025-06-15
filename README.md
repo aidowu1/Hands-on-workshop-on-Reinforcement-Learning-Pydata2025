@@ -39,7 +39,7 @@ Demo source code:
  - Source code for the Frozen Lake demo is located here: 
    - ./demos/frozen-lake
  - Source code for the Cart Pole demo is located here:
-   - ./demos/cart-pole
+   - [cart-pole](https://github.com/aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025/tree/main/demos/cart-pole)
  - Source code for the Pendulum demo is located here:
    - ./demos/pendulum
  - Source code for the Algorithmic RL trader demo is located here:
