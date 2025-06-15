@@ -9,6 +9,7 @@ from pyvirtualdisplay import Display              # headless display
 import matplotlib.pyplot as plt                   # plotting
 from matplotlib.animation import FuncAnimation    # animation
 from IPython import display
+import pandas as pd
 
 from src.main.configs import global_configs as configs
 
@@ -217,6 +218,25 @@ class Helpers:
         plt.close(fig)  # prevent static display
         display.stop()
         return anim
+
+    @staticmethod
+    def getSmoothedAverageRewards(
+            env_name: str,
+            rl_algo_name: str) -> List[float]:
+        """
+        Getter for the smoothed average rewards
+        :param env_name: Name of the environment
+        :param rl_algo_name: Name of the RL algorithm
+        :return: Smoothed average rewards
+        """
+        results_monitor_path = f"{configs.LOG_FOLDER}/{env_name}_{rl_algo_name}/monitor.csv"
+        if os.path.exists(results_monitor_path):
+            df = pd.read_csv(results_monitor_path, index_col=None, skiprows=[0])
+            mean_rewards = list(df.r)
+        else:
+            print(f"Smoothing average rewards not found, saving to {results_monitor_path}")
+            mean_rewards = []
+        return mean_rewards
 
 
 

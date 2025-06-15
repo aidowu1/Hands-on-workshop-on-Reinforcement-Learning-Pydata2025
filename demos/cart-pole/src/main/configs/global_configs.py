@@ -3,7 +3,7 @@ import os
 import gymnasium as gym
 
 # Project name
-PROJECT_ROOT_PATH = "cart-pole-hyper-parameter-tuning"
+PROJECT_ROOT_PATH = "cart-pole"
 
 # Data file paths
 DATA_FOLDER = "data"
@@ -12,9 +12,12 @@ os.makedirs(DATA_FOLDER, exist_ok=True)
 # Model file paths
 MODEL_FOLDER = "model"
 os.makedirs(MODEL_FOLDER, exist_ok=True)
-FROZEN_LAKE_QL_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_q_learning_model.pl")
-FROZEN_LAKE_SARSA_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_sarsa_model.pl")
-FROZEN_LAKE_DQN_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_dqn_model.pl")
+# FROZEN_LAKE_QL_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_q_learning_model.pl")
+# FROZEN_LAKE_SARSA_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_sarsa_model.pl")
+# FROZEN_LAKE_DQN_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "frozen_lake_dqn_model.pl")
+CART_POLE_QL_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "cart_pole_q_learning_model.pl")
+CART_POLE_SARSA_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "cart_pole_sarsa_model.pl")
+CART_POLE_DQN_MODEL_FILE_PATH = os.path.join(MODEL_FOLDER, "cart_pole_dqn_model.pl")
 
 
 # LOGGING Configurations
@@ -30,7 +33,9 @@ LINE_DIVIDER = "==========" * 5
 
 # Frozen-lake environment configurations
 RENDER_MODE = "rgb_array"
-FROZEN_LAKE_ENV: gym.Env = gym.make("FrozenLake-v1", is_slippery=True, render_mode=RENDER_MODE)
+# FROZEN_LAKE_ENV: gym.Env = gym.make("FrozenLake-v1", is_slippery=True, render_mode=RENDER_MODE)
+CART_POLE_PROBLEM_NAME = "CartPole-v1"
+CART_POLE_ENV: gym.Env = gym.make(CART_POLE_PROBLEM_NAME, render_mode=RENDER_MODE)
 SEED = 100
 EPISODE_UPDATE_FREQUENCY = 1000
 
@@ -57,8 +62,8 @@ DDPG_MAX_STEPS = 100
 
 # SB3 configurations (for DDPG, TD3, SAC and PPO RL algorithms)
 SB3_N_EPISODES = 100  # Hyperparameter tuning => 10 Training => 200
-SB3_N_EVALUATION_EPISODES = 10
-SB3_MAX_STEPS = 500  # Pendulum => 250, Cart-pole => 500
+SB3_N_EVALUATION_EPISODES = 5
+SB3_MAX_STEPS = 5000  # Pendulum => 250, Cart-pole => 500
 SB3_N_TUNING_TRAIN_STEPS = SB3_N_EPISODES * SB3_MAX_STEPS
 SB3_CHECK_FREQUENCY = 1000
 SB3_TRAIN_FREQUENCY = 100

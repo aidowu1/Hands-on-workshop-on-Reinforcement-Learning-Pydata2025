@@ -138,7 +138,8 @@ class BaseRLAlgorithm(ABC):
             total_reward = 0
             for _ in range(self._n_steps):
                 action_array, _states = self._model.predict(states)
-                action = np.array([action_array.item()])
+                #action = np.array([action_array.item()])
+                action = action_array.item()
                 states, reward, done, terminated, info = env.step(action)
                 total_reward += reward
                 self._rewards.append(total_reward)

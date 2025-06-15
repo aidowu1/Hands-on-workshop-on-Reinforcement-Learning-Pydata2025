@@ -56,7 +56,7 @@ class SACTrainAlgorithm(BaseRLAlgorithm):
         callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=self._reward_threshold, verbose=1)
         eval_callback = EvalCallback(self._env, callback_on_new_best=callback_on_best, verbose=1)
         callback = SaveOnBestTrainingRewardCallback(check_freq=self._check_freq, log_dir=self._log_dir)
-        self._model.learn(total_timesteps=self._max_train_steps, callback=[callback, eval_callback])
+        self._model.learn(total_timesteps=self._max_train_time_steps, callback=[callback, eval_callback])
         self._model.save(self._model_path)
 
     @property

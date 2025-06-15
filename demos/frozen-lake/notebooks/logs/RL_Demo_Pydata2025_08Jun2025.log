@@ -1,0 +1,65 @@
+2025-06-08 20:44:28,574 - INFO - q_learning_agent.py:__init__ - : Frozen Lake environment creation.. in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:55
+2025-06-08 20:44:28,574 - INFO - q_learning_agent.py:__init__ - : Observation space: 16 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:56
+2025-06-08 20:44:28,574 - INFO - q_learning_agent.py:__init__ - : Action space: 4 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:57
+2025-06-08 20:44:28,574 - INFO - q_learning_agent.py:__init__ - : RL hyperparameters are:
+                  
+alpha: 0.1
+                  
+epsilon: 1.0
+                  
+epsilon_decay: 0.995
+                  
+min_epsilon: 0.01
+ in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:58
+2025-06-08 20:52:21,864 - INFO - q_learning_agent.py:__init__ - : Frozen Lake environment creation.. in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:55
+2025-06-08 20:52:21,871 - INFO - q_learning_agent.py:__init__ - : Observation space: 16 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:56
+2025-06-08 20:52:21,871 - INFO - q_learning_agent.py:__init__ - : Action space: 4 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:57
+2025-06-08 20:52:21,873 - INFO - q_learning_agent.py:__init__ - : RL hyperparameters are:
+                  
+alpha: 0.1
+                  
+epsilon: 1.0
+                  
+epsilon_decay: 0.995
+                  
+min_epsilon: 0.01
+ in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:58
+2025-06-08 20:53:10,838 - INFO - q_learning_agent.py:__init__ - : Frozen Lake environment creation.. in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:55
+2025-06-08 20:53:10,839 - INFO - q_learning_agent.py:__init__ - : Observation space: 16 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:56
+2025-06-08 20:53:10,840 - INFO - q_learning_agent.py:__init__ - : Action space: 4 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:57
+2025-06-08 20:53:10,840 - INFO - q_learning_agent.py:__init__ - : RL hyperparameters are:
+                  
+alpha: 0.1
+                  
+epsilon: 1.0
+                  
+epsilon_decay: 0.995
+                  
+min_epsilon: 0.01
+ in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:58
+2025-06-08 21:18:52,107 - INFO - q_learning_agent.py:__init__ - : Frozen Lake environment creation.. in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:55
+2025-06-08 21:18:52,108 - INFO - q_learning_agent.py:__init__ - : Observation space: 16 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:56
+2025-06-08 21:18:52,109 - INFO - q_learning_agent.py:__init__ - : Action space: 4 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:57
+2025-06-08 21:18:52,111 - INFO - q_learning_agent.py:__init__ - : RL hyperparameters are:
+                  
+alpha: 0.1
+                  
+epsilon: 1.0
+                  
+epsilon_decay: 0.995
+                  
+min_epsilon: 0.01
+ in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:58
+2025-06-08 21:19:58,435 - INFO - q_learning_agent.py:__init__ - : Frozen Lake environment creation.. in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:55
+2025-06-08 21:19:58,437 - INFO - q_learning_agent.py:__init__ - : Observation space: 16 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:56
+2025-06-08 21:19:58,437 - INFO - q_learning_agent.py:__init__ - : Action space: 4 in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:57
+2025-06-08 21:19:58,439 - INFO - q_learning_agent.py:__init__ - : RL hyperparameters are:
+                  
+alpha: 0.1
+                  
+epsilon: 1.0
+                  
+epsilon_decay: 0.995
+                  
+min_epsilon: 0.01
+ in C:\Development\Python\AI\ReinforcementLearning\PyData2025-Presentation\repo\Hands-on-workshop-on-Reinforcement-Learning-Pydata2025\demos\frozen-lake\src\main\rl_agents\q_learning_agent.py:58

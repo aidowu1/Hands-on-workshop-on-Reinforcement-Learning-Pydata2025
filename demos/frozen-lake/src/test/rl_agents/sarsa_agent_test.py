@@ -4,7 +4,7 @@ import os
 from dataclasses import asdict
 
 from src.main.rl_agents.sarsa_agent import SarsaAgent
-from src.main.configs.q_learning_agent_configs import QLearningAgentConfig
+from src.main.configs.sarsa_agent_configs import SarsaAgentConfig
 import src.main.configs.global_configs as configs
 from src.main.utility.utils import Helpers
 from src.main.utility.chart_results import ChartResults
@@ -28,7 +28,7 @@ class QLearningAgentTest(ut.TestCase):
         Test the validity of QLearningAgent constructor
         """
         error_msg = f"Invalid tests: Error testing function: {inspect.stack()[0][3]}()"
-        configs = asdict(QLearningAgentConfig())
+        configs = asdict(SarsaAgentConfig())
         sarsa_agent = SarsaAgent(**configs)
         self.assertTrue(isinstance(sarsa_agent, SarsaAgent), msg=error_msg)
         self.assertIsNotNone(sarsa_agent, msg=error_msg)
@@ -38,7 +38,7 @@ class QLearningAgentTest(ut.TestCase):
         Test the validity of QLearningAgent run/execution
         """
         error_msg = f"Invalid tests: Error testing function: {inspect.stack()[0][3]}()"
-        configs = asdict(QLearningAgentConfig())
+        configs = asdict(SarsaAgentConfig())
         sarsa_agent = SarsaAgent(**configs)
         self.assertTrue(isinstance(sarsa_agent, SarsaAgent), msg=error_msg)
         self.assertIsNotNone(sarsa_agent, msg=error_msg)
@@ -49,7 +49,7 @@ class QLearningAgentTest(ut.TestCase):
         Test the validity of QLearningAgent run/execution with reward curve plot
         """
         error_msg = f"Invalid tests: Error testing function: {inspect.stack()[0][3]}()"
-        agent_configs = asdict(QLearningAgentConfig())
+        agent_configs = asdict(SarsaAgentConfig())
         sarsa_agent = SarsaAgent(**agent_configs)
         self.assertTrue(isinstance(sarsa_agent, SarsaAgent), msg=error_msg)
         self.assertIsNotNone(sarsa_agent, msg=error_msg)

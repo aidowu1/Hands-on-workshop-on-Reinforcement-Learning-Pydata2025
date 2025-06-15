@@ -50,7 +50,7 @@ class DDPGTrainAlgorithm(BaseRLAlgorithm):
         :return:
         """
         callback = SaveOnBestTrainingRewardCallback(check_freq=self._check_freq, log_dir=self._log_dir)
-        self._model.learn(total_timesteps=self._max_train_steps, callback=callback)
+        self._model.learn(total_timesteps=self._max_train_time_steps, callback=callback)
         self._model.save(self._model_path)
 
     @property

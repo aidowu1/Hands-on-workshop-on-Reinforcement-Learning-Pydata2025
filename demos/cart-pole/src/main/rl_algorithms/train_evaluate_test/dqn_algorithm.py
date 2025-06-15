@@ -19,7 +19,7 @@ class DQNTrainAlgorithm(BaseRLAlgorithm):
             self,
             env: gym.Env,
             rl_algorithm_type: RLAgorithmType = RLAgorithmType.dqn,
-            rl_problem_title: str ="CartPole-v0",
+            rl_problem_title: str =configs.CART_POLE_PROBLEM_NAME,
             n_train_episodes: int = configs.SB3_N_EPISODES,
             n_eval_episodes: int = configs.SB3_N_EVALUATION_EPISODES,
             max_steps: int = configs.SB3_MAX_STEPS,

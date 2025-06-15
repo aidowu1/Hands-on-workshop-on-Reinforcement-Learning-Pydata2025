@@ -1,15 +1,16 @@
 from typing import List, Tuple, Dict, Any
-import pandas as pd
+
 import matplotlib.pyplot as plt
+import pandas as pd
 
 import src.main.configs.global_configs as configs
 import src.main.configs.rl_robo_trader_run_configs as rl_configs
-from src.main.utility.utils import Helpers
 from src.main.environment.rl_algo_trader_env import TradingEnv
-from src.main.utility.enum_types import RLAgorithmType
 from src.main.rl_algorithms.train_evaluate_test.dqn_algorithm import DQNTrainAlgorithm
 from src.main.rl_algorithms.train_evaluate_test.ppo_algorithm import PPOTrainAlgorithm
+from src.main.utility.enum_types import RLAgorithmType
 from src.main.utility.logging import Logger
+from src.main.utility.utils import Helpers
 
 logger = Logger.getLogger()
 
@@ -65,18 +66,16 @@ class RLAlgoTradingAgent:
         plt.ylabel("Average Reward")
         plt.title(f"Moving average over {configs.SB3_SMOOTH_MEAN_WINDOW} episodes")
 
-    def trainRLWithRandomAgent(
-            self,
-            n_episodes: int=10
-    ) -> Tuple[List[float], List[Dict[str, Any]]]:
+    def trainRLWithRandomAgent(self) -> Tuple[List[float], List[Dict[str, Any]]]:
         """
         Train the environment with a random RL agent
         """
         columns = ["action", "state", "next_state", "reward", "done", "truncated", "info"]
         results_df = Helpers.createTable(columns=columns)
+        n_timesteps = self.train_env.data.shape[0] - 10
 
         state, info = self.train_env.reset()
-        for i in range(n_episodes):
+        for i in range(n_timesteps):
             action = self.train_env.action_space.sample()
             next_state, reward, done, truncated, info = self.train_env.step(action)
             new_row = pd.Series(

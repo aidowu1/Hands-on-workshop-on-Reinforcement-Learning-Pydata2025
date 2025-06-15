@@ -9,6 +9,7 @@ from src.main.utility.utils import Helpers
 from src.main.rl_algorithms.train_evaluate_test.ppo_algorithm import PPOTrainAlgorithm
 from src.main.rl_algorithms.hyper_parameter_tuning.ppo_hyper_parameter_tuning import PPOHyperParameterTuning
 from src.main.utility.enum_types import RLAgorithmType
+from src.main.utility.chart_results import ChartResults
 
 class PPOTrainAlgorithmTest(ut.TestCase):
     """
@@ -22,8 +23,9 @@ class PPOTrainAlgorithmTest(ut.TestCase):
         self.current_path = Helpers.getPojectRootPath()
         print(f"Current path is: {self.current_path}...{configs.NEW_LINE}")
         os.chdir(self.current_path)
-        self.env_name = "Pendulum-v1"
-        self.env = gym.make("Pendulum-v1", render_mode="rgb_array")
+        self.rl_algo_type = RLAgorithmType.dqn
+        self.cartpole_name = configs.CART_POLE_PROBLEM_NAME
+        self.env = gym.make(self.cartpole_name, render_mode="rgb_array")
         self.rl_algorithm_type = RLAgorithmType.ppo
 
     def test_PPOTrainAlgorithm_Constructor_Is_Valid(self):
@@ -72,7 +74,19 @@ class PPOTrainAlgorithmTest(ut.TestCase):
             self.env
         )
         self.assertIsNotNone(ppo_agent, msg=error_msg)
-        ppo_agent.evaluate()
+        env = gym.make(self.cartpole_name, render_mode="human")
+        ppo_agent.evaluate(env=env)
+
+    def test_PPOTrainAlgorithm_Plot_Reward_Curves_Agent_Model_Is_Valid(self):
+        """
+        Test the validity of plotting the reward curve for PPO RL trained agent.
+        """
+        error_msg = f"Invalid tests: Error testing function: {inspect.stack()[0][3]}()"
+        rewards = Helpers.getSmoothedAverageRewards(
+            env_name=self.cartpole_name,
+            rl_algo_name=self.rl_algorithm_type.name)
+        self.assertIsNotNone(rewards, msg=error_msg)
+        ChartResults.plotRewardCurve(rewards, window_size=200)
 
     def evaluateTrainedModel(self, model):
         """

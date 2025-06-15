@@ -37,6 +37,9 @@ class BaseRLAlgorithm(ABC):
             max_steps: int = configs.SB3_MAX_STEPS,
             check_freq: int = configs.SB3_CHECK_FREQUENCY,
             reward_threshold: float = configs.SB3_REWARD_THRESHOLD,
+            max_train_time_steps: int = configs.SB3_MAX_TRAIN_TIME_STEPS
+
+
     ):
         """
         Constructor
@@ -48,7 +51,7 @@ class BaseRLAlgorithm(ABC):
         self._n_train_episodes = n_train_episodes
         self._n_eval_episodes = n_eval_episodes
         self._n_steps = max_steps
-        self._max_train_steps = n_train_episodes * max_steps
+        self._max_train_time_steps = max_train_time_steps
         self._check_freq = check_freq
         self._reward_threshold = reward_threshold
         self._rl_algo_type = rl_algorithm_type

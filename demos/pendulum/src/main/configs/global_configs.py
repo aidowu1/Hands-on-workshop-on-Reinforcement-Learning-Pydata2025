@@ -28,9 +28,10 @@ LOG_PATH = os.path.join(LOG_FOLDER, LOG_FILE)
 NEW_LINE = "\n"
 LINE_DIVIDER = "==========" * 5
 
-# Frozen-lake environment configurations
+# Pendulum environment configurations
 RENDER_MODE = "rgb_array"
-FROZEN_LAKE_ENV: gym.Env = gym.make("FrozenLake-v1", is_slippery=True, render_mode=RENDER_MODE)
+PENDULUM_PROBLEM_NAME = "Pendulum-v1"
+PENDULUM_ENV: gym.Env = gym.make(PENDULUM_PROBLEM_NAME, render_mode=RENDER_MODE)
 SEED = 100
 EPISODE_UPDATE_FREQUENCY = 1000
 
@@ -58,6 +59,7 @@ DDPG_MAX_STEPS = 100
 # SB3 configurations (for DDPG, TD3, SAC and PPO RL algorithms)
 SB3_N_EPISODES = 100  # Hyperparameter tuning => 10 Training => 200
 SB3_N_EVALUATION_EPISODES = 10
+SB3_MAX_TRAIN_TIME_STEPS = 2E5
 SB3_MAX_STEPS = 500  # Pendulum => 250, Cart-pole => 500
 SB3_N_TUNING_TRAIN_STEPS = SB3_N_EPISODES * SB3_MAX_STEPS
 SB3_CHECK_FREQUENCY = 1000
@@ -68,8 +70,8 @@ SB3_N_STARTUP_TRIALS = 5
 SB3_N_TRIALS = 5
 SB3_TUNING_TIMEOUT = 2 * 60 * 60
 SB3_IS_USE_HYPER_PARAMETER_TUNING = False
-SB3_REWARD_THRESHOLD = 200   # Cart-pole problem
-# SB3_REWARD_THRESHOLD = -200   # pendulum problem
+#SB3_REWARD_THRESHOLD = 200   # Cart-pole problem
+SB3_REWARD_THRESHOLD = -200   # pendulum problem
 
 # SB3 Hyperparameter tuning results path
 IS_USE_HYPER_PARAMETER_TUNING = True
