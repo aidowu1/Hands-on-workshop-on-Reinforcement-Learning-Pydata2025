@@ -17,3 +17,31 @@ There will be 5 demos:
  -The fourth demo introduces us to hyper-parameter tuning using Stable Baseline library
  - The final demo is the main one which demonstrates a simple algo RL agent for trading the S & P index using price/bar data from  2010 to 2019
 
+### Instructions on setting-up
+Install the code from the git repo:
+ - Launch your local version of command prompt (cmd)
+ - Clone the code repo by typing the following in the CMD prompt:
+   - git clone git@github.com:aidowu1/Hands-on-workshop-on-Reinforcement-Learning-Pydata2025.git
+ - Change your working directory to the root folder of the application:
+   - cd Hands-on-workshop-on-Reinforcement-Learning-Pydata2025
+ - Ensure you have a python distribution on your PC, for this solution I used the Miniconda distribution. Please following the instruction described here to install minconda on your PC.
+ - Create a python virtual environment for this solution following these steps (I used a miniconda virtual environment with python 3.11 and a requirements.txt file pulled from the repo):
+   - conda create -n hedging_env python=3.11 -y
+   - Activate the newly created environment:
+     - conda activate rl_env
+   - Install other python packages in the activated environment using requirements.txt obtained from the repo:
+     - pip install -r ./demos/requirements.txt 
+ 
+
+Demo source code:
+ - Source code for the Grid World demo is located here:
+   - ./demos/grid-world
+ - Source code for the Frozen Lake demo is located here: 
+   - ./demos/frozen-lake
+ - Source code for the Cart Pole demo is located here:
+   - ./demos/cart-pole
+ - Source code for the Pendulum demo is located here:
+   - ./demos/pendulum
+ - Source code for the Algorithmic RL trader demo is located here:
+   - ./demos/rl-robo-algo-trader
+
